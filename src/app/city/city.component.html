@@ -1,0 +1,30 @@
+<h1>{{ currentCity.CityID}} - {{ title }}</h1>
+
+<p class="error">
+  {{ errorMessage }}
+</p>
+
+<label>ID</label>
+<input type="text" [(ngModel)]="currentCity.CityID" readonly/>
+
+<label>Naam</label>
+<input type="text" [(ngModel)]="currentCity.CityName" />
+
+<label>Land</label>
+<input type="text" [(ngModel)]="currentCity.Country" />
+
+<label>Populatie</label>
+<input type="text" [(ngModel)]="currentCity.Population" />
+
+<label>Jaar</label>
+<input type="text" [(ngModel)]="currentCity.Year" />
+
+<label>Foto</label>
+<input type="text" [(ngModel)]="currentCity.ImageUrl" />
+
+<br />
+<br />
+<button (click)="saveCity()">opslaan</button>
+<button (click)="deleteCity()">Verwijderen</button>
+
+

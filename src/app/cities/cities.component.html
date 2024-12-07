@@ -1,0 +1,31 @@
+<h1 *ngIf="cities.length > 0">Er zijn {{ cities.length }} steden</h1>
+
+<a routerLink="/editcity">Nieuwe stad</a>
+
+<br />
+<br />
+
+<table>
+  <tr>
+    <th></th>
+    <th>City Id</th>
+    <th>City name</th>
+    <th>Country</th>
+    <th>Population</th>
+    <th>Year</th>
+    <th>Image</th>
+  </tr>
+  <tr *ngFor="let city of cities">
+    <td>
+      <a [routerLink]="'/editcity/' + city.CityID">edit</a>
+    </td>
+    <td>{{ city.CityID }}</td>
+    <td>{{ city.CityName }}</td>
+    <td>{{ city.Country }}</td>
+    <td>{{ city.Population }}</td>
+    <td>{{ city.Year}}</td>
+    <td>
+      <img [src]="city.ImageUrl" width="50"  alt=""/>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,11 @@
+nav
+{
+  background-color: aqua;
+  padding: 20px;
+}
+
+nav a
+{
+  color: ghostwhite;
+  margin: 10px;
+}

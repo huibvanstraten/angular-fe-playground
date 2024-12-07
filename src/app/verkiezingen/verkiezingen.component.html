@@ -1,0 +1,27 @@
+<h1 *ngIf="partijen.length > 0">Er zijn {{ partijen.length }} partijen</h1>
+
+<div class="partij"
+     [class]="{ selected: p.isSelected}"
+     (click)="p.isSelected = !p.isSelected"
+     *ngFor="let p of partijen">{{ p.partijNaam }}
+</div>
+
+<br style="clear: both"/>
+
+<p>Deze coalitie heeft {{ totaalCoalitie }} zetels</p>
+
+<p *ngIf="isMeerderheid">Deze coalitie heeft WEL een meerderheid</p>
+<p *ngIf="!isMeerderheid">Deze coalitie heeft GEEN meerderheid</p>
+
+
+<h3> Coalitie</h3>
+
+
+<svg height="12" [attr.width]="totaalAantalZetels">
+  <rect x="0" y="0" height="25" [attr.width]="totaalAantalZetels" fill="lightgrey"></rect>
+  <rect x="0" y="0" height="25" [attr.width]="totaalCoalitie" [attr.fill]="isMeerderheid ? 'green' : 'red'"></rect>
+</svg>
+
+<ul>
+  <li *ngFor="let p of coalitie"> {{ p.VolledigeNaam }}</li>
+</ul>

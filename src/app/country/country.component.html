@@ -1,0 +1,28 @@
+<h1 *ngIf="countries.length > 0">Er zijn {{ filteredCountries.length }} landen</h1>
+
+<input type="text" placeholder="Voer een land in..." [(ngModel)]="searchText" />
+
+<br />
+<br />
+
+<table>
+  <tr>
+    <th (click)="sortByName()" class="clickable">Naam</th>
+    <th>Regio</th>
+    <th>Subregio</th>
+    <th> Inwoners</th>
+    <th>Oppervlakte</th>
+    <th>Vlag</th>
+  </tr>
+  <tr *ngFor="let country of filteredCountries">
+    <td>{{ country.name.common }}</td>
+    <td>{{ country.region }}</td>
+    <td>{{ country.subregion }}</td>
+    <td>{{ country.population }}</td>
+    <td>{{ country.area }}</td>
+    <td>
+      <img [src]="country.flags.svg" width="50"  alt=""/>
+    </td>
+
+  </tr>
+</table>

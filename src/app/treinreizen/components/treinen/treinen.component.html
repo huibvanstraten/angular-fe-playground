@@ -1,0 +1,9 @@
+
+<div class="left">
+<!--  <app-stationslijst (stationSelected)="setCurrentStation($event)"></app-stationslijst>-->
+  <app-stationmap (stationSelected)="setCurrentStation($event)"></app-stationmap>
+</div>
+
+<div class="right">
+  <app-vertrektijden [station]="currentStation"></app-vertrektijden>
+</div>

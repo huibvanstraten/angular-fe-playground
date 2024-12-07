@@ -1,0 +1,20 @@
+<h1>Angular Fundamentals</h1>
+
+@if (names.length == 1) {
+<h3> Er is {{ names.length }} deelnemer</h3>
+} @else {
+  <h3> Er zijn {{ names.length }} deelnemers</h3>
+}
+
+<!--<ul>-->
+<!--  <li *ngFor="let n of names"> {{ n }} </li>-->
+<!--</ul>-->
+
+<input type="text" [(ngModel)]="newName" (keyup.enter)="addName()"/>
+<button [disabled]="newName === ''" (click)="addName()">toevoegen</button>
+
+<br />
+
+@for (n of names; track $index) {
+  <app-student (RemoveStudent)="removeStudentComponent($event)" [Name] = "n"></app-student>
+}

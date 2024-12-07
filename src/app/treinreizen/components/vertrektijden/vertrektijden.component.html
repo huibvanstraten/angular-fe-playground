@@ -1,0 +1,21 @@
+<h1 *ngIf="station"> {{ station.Name }}</h1>
+<h1 *ngIf="!station">Selecteer een station</h1>
+
+<table>
+  <tr>
+    <th>Eindbestemming</th>
+    <th>Tijd</th>
+    <th>Vertraging</th>
+    <th>Via</th>
+    <th>Soort</th>
+    <th>Spoor</th>
+  </tr>
+  <tr *ngFor="let tijd of tijden">
+    <td>{{ tijd.EindBestemming }}</td>
+    <td>{{ tijd.VertrekTijd | time }}</td>
+    <td>{{ tijd.VertrekVertragingTekst }}</td>
+    <td>{{ tijd.RouteTekst }}</td>
+    <td>{{ tijd.TreinSoort }}</td>
+    <td>{{ tijd.VertrekSpoor }}</td>
+  </tr>
+</table>

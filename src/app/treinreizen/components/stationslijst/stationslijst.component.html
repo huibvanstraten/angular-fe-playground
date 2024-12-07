@@ -1,0 +1,6 @@
+<select size="30">
+  <option *ngFor="let station of stations"
+          (click)="stationOnClick(station)">
+          {{ station.Name }} <span *ngIf="station.Country != 'NL'">({{ station.Country }})</span>
+  </option>
+</select>

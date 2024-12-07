@@ -1,0 +1,27 @@
+table
+{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr:nth-child(odd)
+{
+  background-color: blueviolet;
+}
+
+tr:first-child
+{
+  background-color: violet;
+  color: white;
+}
+
+td, th
+{
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.clickable
+{
+  cursor: pointer;
+}

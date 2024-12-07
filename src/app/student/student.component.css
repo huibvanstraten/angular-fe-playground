@@ -1,0 +1,17 @@
+.student
+{
+  float: left;
+  border: blue 3px solid;
+  border-radius: 5px;
+  background-color: lightblue;
+  text-align: center;
+  margin: 20px;
+  width: 100px;
+}
+
+.student header
+{
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}

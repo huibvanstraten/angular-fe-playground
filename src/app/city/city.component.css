@@ -1,0 +1,17 @@
+label
+{
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px 0;
+}
+
+.foto
+{
+  width: 1000px;
+}
+
+.error
+{
+  color: red;
+  font-style: italic;
+}

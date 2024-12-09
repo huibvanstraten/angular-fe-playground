@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Partij} from '../partij';
+import {Partij} from './partij';
 import {HttpClient} from '@angular/common/http';
 import {NgForOf, NgIf} from '@angular/common';
 import { plainToInstance } from 'class-transformer';

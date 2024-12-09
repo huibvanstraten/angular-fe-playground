@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {CitiesService} from '../cities.service';
-import {City} from '../city';
+import {CitiesService} from '../../cities.service';
+import {City} from '../../city';
 import {FormsModule} from '@angular/forms';
 import {NgForOf, NgIf} from '@angular/common';
 import {RouterLink} from '@angular/router';

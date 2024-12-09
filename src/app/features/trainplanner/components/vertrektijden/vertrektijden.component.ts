@@ -3,7 +3,7 @@ import {Station} from '../../station';
 import {NgForOf, NgIf} from '@angular/common';
 import {VertrektijdInfo} from '../../vertrektijd-info';
 import {NsApiService} from '../../ns-api.service';
-import {TimePipe} from '../../../time.pipe';
+import {TimePipe} from '../../../../shared/time.pipe';
 
 @Component({
   selector: 'app-vertrektijden',

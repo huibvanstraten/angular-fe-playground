@@ -5,13 +5,8 @@ import {StudentComponent} from '../student/student.component';
 
 @Component({
   selector: 'app-training',
-  imports: [
-    CommonModule,
-    FormsModule,
-    StudentComponent
-  ],
+  imports: [CommonModule, FormsModule, StudentComponent],
   templateUrl: './training.component.html',
-  styleUrl: './training.component.css'
 })
 
 export class TrainingComponent {

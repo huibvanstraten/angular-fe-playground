@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NgForOf, NgIf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {CountryObject} from '../country-object';
+import {CountryObject} from '../../country-object';
 
 @Component({
   selector: 'app-country',

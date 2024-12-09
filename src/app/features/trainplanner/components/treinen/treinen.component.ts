@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {StationslijstComponent} from '../stationslijst/stationslijst.component';
 import {VertrektijdenComponent} from '../vertrektijden/vertrektijden.component';
 import {Station} from '../../station';
 import {StationmapComponent} from '../stationmap/stationmap.component';

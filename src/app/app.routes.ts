@@ -1,4 +1,4 @@
-import {RouterModule, Routes} from '@angular/router';
+import {Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {TrainingComponent} from './training/training.component';
 import {CountryComponent} from './country/country.component';
@@ -6,7 +6,6 @@ import {VerkiezingenComponent} from './verkiezingen/verkiezingen.component';
 import {CitiesComponent} from './cities/cities.component';
 import {CityComponent} from './city/city.component';
 import {TreinenComponent} from './treinreizen/components/treinen/treinen.component';
-import {NgModule} from '@angular/core';
 
 export const routes: Routes = [
   {
@@ -42,9 +41,3 @@ export const routes: Routes = [
     component: TreinenComponent
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}

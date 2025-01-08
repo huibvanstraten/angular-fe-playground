@@ -1,0 +1,93 @@
+/* user.component.css */
+
+.spotify-form {
+  background-color: rgba(50, 50, 150, 0.85); /* Soft blue with transparency */
+  padding: 2rem;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds depth */
+  color: #e0e0ff; /* Light lavender text for contrast */
+  position: relative;
+  z-index: 2; /* Ensures it sits above the bubbles */
+
+  /* Transition for smooth hover effects (optional) */
+  transition: box-shadow 0.3s ease;
+}
+
+.spotify-form:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.spotify-form h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* White for the heading */
+  font-size: 1.5rem;
+  text-align: center; /* Center the heading */
+}
+
+.spotify-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #e0e0ff; /* Light lavender for labels */
+}
+
+.spotify-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(68, 68, 170, 0.8); /* Soft blue borders */
+  border-radius: 4px;
+  background-color: rgba(24, 24, 24, 0.95); /* Slight transparency for depth */
+  color: #ffffff;
+  outline: none;
+  font-size: 0.9rem;
+
+  /* Transition for smooth border color change on focus */
+  transition: border-color 0.3s ease;
+}
+
+.spotify-form input:focus {
+  border-color: rgba(70, 70, 220, 1); /* Brighter blue on focus */
+}
+
+.spotify-form .error-msg {
+  color: #ff7f7f; /* Soft red for errors */
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  text-align: left; /* Align error messages to the left */
+}
+
+.spotify-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: rgba(70, 70, 220, 0.9); /* Complementary blue */
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
+
+  /* Transform for slight movement on hover */
+}
+
+.spotify-form button:hover:not(:disabled) {
+  background-color: rgba(90, 90, 240, 0.95); /* Slightly lighter blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.spotify-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Spacing around dynamic band fields */
+.band-field {
+  margin-bottom: 1rem;
+}

@@ -1,43 +1,40 @@
 import {Routes} from '@angular/router';
-import {HomeComponent} from './features/home/home.component';
-import {TrainingComponent} from './features/studentregistration/training/training.component';
-import {CountryComponent} from './features/countries/components/country/country.component';
-import {VerkiezingenComponent} from './features/elections/verkiezingen.component';
-import {CitiesComponent} from './features/cityoversight/components/cities/cities.component';
-import {CityComponent} from './features/cityoversight/components/city/city.component';
-import {TreinenComponent} from './features/trainplanner/components/treinen/treinen.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    loadComponent: () => import('./features/home/home.component').then(m => m.HomeComponent)
   },
   {
     path: 'training',
-    component: TrainingComponent
+    loadComponent: () => import('./features/studentregistration/training/training.component').then(m => m.TrainingComponent)
   },
   {
     path: 'countries',
-    component: CountryComponent
+    loadComponent: () => import('./features/countries/components/country/country.component').then(m => m.CountryComponent)
   },
   {
     path: 'verkiezingen',
-    component: VerkiezingenComponent
+    loadComponent: () => import('./features/elections/verkiezingen.component').then(m => m.VerkiezingenComponent)
   },
   {
     path: 'cities',
-    component: CitiesComponent
+    loadComponent: () => import('./features/cityoversight/components/cities/cities.component').then(m => m.CitiesComponent)
   },
   {
     path: 'editcity/:id',
-    component: CityComponent
+    loadComponent: () => import('./features/cityoversight/components/city/city.component').then(m => m.CityComponent)
   },
   {
     path: 'editcity',
-    component: CityComponent
+    loadComponent: () => import('./features/cityoversight/components/city/city.component').then(m => m.CityComponent)
   },
   {
     path: 'treinen',
-    component: TreinenComponent
+    loadComponent: () => import('./features/trainplanner/components/treinen/treinen.component').then(m => m.TreinenComponent)
+  },
+  {
+    path: 'user',
+    loadComponent: () => import('./features/musicreleasemonitor/components/gradient-bg/gradient-bg.component').then(m => m.GradientBgComponent)
   }
 ];

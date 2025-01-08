@@ -1,0 +1,55 @@
+<form class="spotify-form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <!-- Name field -->
+  <label for="name">Name:</label>
+  <input type="text" id="name" formControlName="name" />
+  <div *ngIf="userForm.get('name')?.errors?.['required']" class="error-msg">
+    Name is required
+  </div>
+
+  <!-- Toggle the 'required' validator on 'name' -->
+  <button type="button" (click)="toggleValidation()">Toggle Validation</button>
+
+  <!-- Email field -->
+  <label for="email">Email:</label>
+  <input type="email" id="email" formControlName="email" />
+  <div *ngIf="userForm.get('email')?.errors?.['required']" class="error-msg">
+    Email is required
+  </div>
+  <div *ngIf="userForm.get('email')?.errors?.['email']" class="error-msg">
+    Email is invalid
+  </div>
+
+  <!-- Show the "bands" section ONLY IF 'name' is valid -->
+  <div *ngIf="userForm.get('name')?.valid">
+    <div formArrayName="bands">
+      <div
+        *ngFor="let bandControl of bandsArray.controls; let i = index"
+        class="band-field"
+      >
+        <label for="band-{{ i }}">Band ID {{ i + 1 }}:</label>
+        <input
+          id="band-{{ i }}"
+          type="text"
+          [formControlName]="i"
+          placeholder="Max 4 chars"
+        />
+        <div *ngIf="bandControl.errors?.['required']" class="error-msg">
+          Band ID #{{ i + 1 }} is required
+        </div>
+        <div *ngIf="bandControl.errors?.['maxlength']" class="error-msg">
+          Up to 4 characters only
+        </div>
+        <button
+          type="button"
+          (click)="removeBand(i)"
+          *ngIf="bandsArray.length > 1"
+        >
+          Remove
+        </button>
+      </div>
+    </div>
+    <button type="button" (click)="addBand()">Add Band</button>
+  </div>
+
+  <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>

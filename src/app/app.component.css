@@ -9,3 +9,15 @@ nav a
   color: ghostwhite;
   margin: 10px;
 }
+/* app.component.css */
+
+.gradient-bg .gradients-container {
+  /* Existing styles */
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Example: Change filter on hover to create dynamic effects */
+.gradient-bg:hover .gradients-container {
+  filter: url(#goo) blur(30px);
+  opacity: 0.9;
+}
